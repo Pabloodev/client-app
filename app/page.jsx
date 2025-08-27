@@ -2,7 +2,7 @@ import LoginForm from "./ui/components/loginForm";
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen justify-center items-center">
+    <main className="flex min-h-screen justify-center items-center bg-black-800">
       <div className="flex flex-col items-center">
         <img src="/logo.ico" alt="Athon Logo" className="w-30" />
 

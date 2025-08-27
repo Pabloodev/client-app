@@ -3,14 +3,13 @@
 import React, { useState } from "react";
 
 export default function LoginForm() {
-  const [cpfCnpj, setCpfCnpj] = useState("");
+  const [user, setUser] = useState("");
   const [senha, setSenha] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("CPF/CNPJ:", cpfCnpj);
+    console.log("User:", user);
     console.log("Senha:", senha);
-    // Aqui você faria sua chamada de API
   };
 
   return (
@@ -20,12 +19,13 @@ export default function LoginForm() {
         <div className="relative">
           <input
             type="text"
-            id="cpf"
-            value={cpfCnpj}
-            onChange={(e) => setCpfCnpj(e.target.value)}
-            placeholder="CPF/CNPJ"
+            id="user"
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+            placeholder="Usuário"
             className="w-full p-3 rounded border-1 border-white focus:outline-none text-white placeholder:text-white"
           />
+
           <span className="absolute right-3 top-3">
             {/* Ícone usuário (poderia ser SVG) */}
             <svg
@@ -82,14 +82,13 @@ export default function LoginForm() {
         </div>
       </div>
 
-      <button
-        type="submit"
-        className="bg-blue-800 text-white py-3 rounded cursor-not-allowed"
-      >
-        Entrar
-      </button>
+      <div className="bg-linear-to-t from-sky-500 to-indigo-500 rounded-lg cursor-pointer p-0.5 shadow-lg shadow-blue-500/50 hover:from-purple-500 hover:to-sky-500 transition duration-300">
+        <button type='submit' className="bg-black w-full text-white px-4 py-2 rounded-lg duration-700 cursor-pointer">
+          Login
+        </button>
+      </div>
 
-      <a href="#" className="text-white text-center mt-2 underline">
+      <a href="#" className="text-white/70 text-center mt-2">
         Esqueci minha senha →
       </a>
     </form>
