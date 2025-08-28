@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Athon Client",
   description: "Athon Cliente - Seu app, sua gestão, seu jeito",
+  icons: '/favicon-site.avif'
 };
 
 export default function RootLayout({ children }) {
